@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /*Primary*/
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /*Neutral*/
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    font-size: 15px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Very-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    background-color: aqua;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    border-radius: 6px;
+}
+
+article{
+    width: 33.33%;
+    height: 100%;
+    padding: 60px 50px;
+    color: #fff;
+}
+
+#sedan {
+    background-color: var(--Bright-orange);
+    border-radius: 6px 0 0 6px;
+}
+
+#suvs {
+    background-color: var(--Dark-cyan);
+}
+
+#luxury {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 6px 6px 0;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    margin: 30px 0;
+}
+
+p {
+    line-height: 1.5rem;
+    margin-bottom: 80px;
+}
+
+button {
+    padding: 14px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    width: 130px;
+}
+
+#sedan button {
+    color: var(--Bright-orange);
+}
+
+#sedan button:hover, #suvs button:hover, #luxury button:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #fff;
+    padding: 12px;
+}
+
+#suvs button {
+    color: var(--Dark-cyan);
+}
+
+#luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width:900px){
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+    }
+    
+    article {
+        width: 100%;
+    }
+
+    #sedan {
+        border-radius: 6px 6px 0 0;
+    }
+
+    #luxury {
+        border-radius: 0 0 6px 6px ;
+    }
+    
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
